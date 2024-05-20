@@ -64,43 +64,45 @@ class SearchViewController: UIViewController {
         
     }
     
+
+    
     @IBAction func releasedButtonTapped(_ sender: UIButton) {
-        releasedButton.backgroundColor = .white
-        releasedButton.configuration?.baseForegroundColor = .black
-        favoredButton.backgroundColor = .clear
-        favoredButton.configuration?.baseForegroundColor = .white
-        topButton.backgroundColor = .clear
-        topButton.configuration?.baseForegroundColor = .white
-        searchResultLabel.text = "공개예정인 작품이 없습니다!"
-        explainLabel.text = "다른 장르를 클릭하거나 검색해 주세요."
+        
+        if sender.tag == 0{
+            releasedButton.backgroundColor = .white
+            releasedButton.configuration?.baseForegroundColor = .black
+            favoredButton.backgroundColor = .clear
+            favoredButton.configuration?.baseForegroundColor = .white
+            topButton.backgroundColor = .clear
+            topButton.configuration?.baseForegroundColor = .white
+            searchResultLabel.text = "공개예정인 작품이 없습니다!"
+            explainLabel.text = "다른 장르를 클릭하거나 검색해 주세요."
+        } else if sender.tag == 1{
+            releasedButton.backgroundColor = .clear
+            releasedButton.configuration?.baseForegroundColor = .white
+            favoredButton.backgroundColor = .white
+            favoredButton.configuration?.baseForegroundColor = .black
+            topButton.backgroundColor = .clear
+            topButton.configuration?.baseForegroundColor = .white
+            searchResultLabel.text = "인기 콘텐츠 작품이 없습니다!"
+            explainLabel.text = "다르게 찾아주세요."
+        } else {
+            
+            releasedButton.backgroundColor = .clear
+            releasedButton.configuration?.baseForegroundColor = .white
+            favoredButton.backgroundColor = .clear
+            favoredButton.configuration?.baseForegroundColor = .white
+            topButton.backgroundColor = .white
+            topButton.configuration?.baseForegroundColor = .black
+            searchResultLabel.text = "TOP 10 시리즈 작품이 없습니다!"
+            explainLabel.text = "네이버 혹은 구글로 찾아주세요."
+            
+        }
+        
+        
         
     }
     
-    @IBAction func favoredButtonTapped(_ sender: UIButton) {
-        
-        releasedButton.backgroundColor = .clear
-        releasedButton.configuration?.baseForegroundColor = .white
-        favoredButton.backgroundColor = .white
-        favoredButton.configuration?.baseForegroundColor = .black
-        topButton.backgroundColor = .clear
-        topButton.configuration?.baseForegroundColor = .white
-        searchResultLabel.text = "인기 콘텐츠 작품이 없습니다!"
-        explainLabel.text = "다르게 찾아주세요."
-        
-    }
-    
-    @IBAction func topButtonTapped(_ sender: UIButton) {
-        
-        releasedButton.backgroundColor = .clear
-        releasedButton.configuration?.baseForegroundColor = .white
-        favoredButton.backgroundColor = .clear
-        favoredButton.configuration?.baseForegroundColor = .white
-        topButton.backgroundColor = .white
-        topButton.configuration?.baseForegroundColor = .black
-        searchResultLabel.text = "TOP 10 시리즈 작품이 없습니다!"
-        explainLabel.text = "네이버 혹은 구글로 찾아주세요."
-        
-    }
-    
+
     
 }
