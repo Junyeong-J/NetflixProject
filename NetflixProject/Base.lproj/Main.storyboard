@@ -651,13 +651,13 @@
                     <tabBarItem key="tabBarItem" title="로그인" image="info" id="2qf-Qw-y8N"/>
                     <navigationItem key="navigationItem" id="PcG-K1-Bio"/>
                     <connections>
-                        <outlet property="codeTextField" destination="ye0-Av-yZC" id="9l7-i6-qGP"/>
-                        <outlet property="emailTextField" destination="dZ5-i4-aXz" id="7wR-wh-Wkk"/>
                         <outlet property="joinButton" destination="fK8-wN-B1O" id="9n0-we-Wrf"/>
-                        <outlet property="locationTextField" destination="ubp-IS-1kL" id="yVQ-c4-Cqd"/>
-                        <outlet property="nicknameTextField" destination="oqV-82-6kr" id="m0f-OL-ZjD"/>
-                        <outlet property="passwordTextField" destination="TwZ-cH-VDg" id="Lar-J2-NBc"/>
                         <outlet property="setSwitch" destination="oBT-ip-bCf" id="TVc-dJ-Me3"/>
+                        <outletCollection property="textFieldLists" destination="dZ5-i4-aXz" collectionClass="NSMutableArray" id="WdQ-4t-DR3"/>
+                        <outletCollection property="textFieldLists" destination="TwZ-cH-VDg" collectionClass="NSMutableArray" id="cvP-Js-4xM"/>
+                        <outletCollection property="textFieldLists" destination="oqV-82-6kr" collectionClass="NSMutableArray" id="7LH-kk-nZG"/>
+                        <outletCollection property="textFieldLists" destination="ubp-IS-1kL" collectionClass="NSMutableArray" id="kGC-Kt-rYG"/>
+                        <outletCollection property="textFieldLists" destination="ye0-Av-yZC" collectionClass="NSMutableArray" id="h8J-CS-8Yi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7X-bG-QHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
